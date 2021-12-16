@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud jakub</title>
+</head>
+<style>
+    th,td {
+        border: 1px solid black;    
+    }
+</style>
+<body>
+    <h1>Crud jakub</h1>
+    <form action="/quotes" method="POST">
+        <input type="number" placeholder="Numer Albumu" name="album">
+        <input type="text" placeholder="Podaj Imie" name="imie">
+        <input type="text" placeholder="Podaj Nazwisko" name="nazwisko">
+        <button type="submit">Dodaj</button>
+    </form>
+      <table>
+          <tr>
+              <th>Album</th>
+              <th>Imie</th>
+              <th>Nazwisko</th>
+          </tr>
+          <% for(var i = 0; i < quotes.length; i++) {%>
+            <tr>
+                <th><%= quotes[i].album %></th>
+                <th><%= quotes[i].imie %></th>
+                <th><%= quotes[i].nazwisko %></th>
+            </tr>
+            <% } %>
+      </table>
+</body>
+</html>
